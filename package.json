@@ -1,0 +1,28 @@
+{
+  "name": "storage-monitor-card",
+  "version": "0.2.0",
+  "description": "A configurable Home Assistant Lovelace card for storage pools, RAID arrays and physical disks.",
+  "private": false,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fissssssh/storage-monitor-card.git"
+  },
+  "homepage": "https://github.com/fissssssh/storage-monitor-card#readme",
+  "bugs": {
+    "url": "https://github.com/fissssssh/storage-monitor-card/issues"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "lit": "^3.3.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  }
+}
