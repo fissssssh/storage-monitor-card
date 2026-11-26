@@ -28,22 +28,39 @@ The screenshots above are taken in Home Assistant; the card follows the Home Ass
 
 ## Installation
 
-### HACS (recommended)
+The card works with the built-in **Marketplace** in Home Assistant 2026.11 and newer, and with **HACS** on Home Assistant 2026.10 and older.
 
-Storage Monitor Card can be installed with [HACS](https://hacs.xyz/) as a custom repository. It is not part of the HACS default store yet.
+[![Open your Home Assistant instance and open a repository in the Marketplace.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=fissssssh&repository=storage-monitor-card&category=plugin)
 
-1. Install HACS if you have not already.
-2. In Home Assistant, open **HACS → Dashboard**.
+### Marketplace (Home Assistant 2026.11+)
+
+Storage Monitor Card is not part of the catalog yet, so add it from its GitHub link first:
+
+1. Go to **Settings → Marketplace**.
+2. In the upper-right corner, select **Add from link**.
+3. Enter `https://github.com/fissssssh/storage-monitor-card` and select **Add**. If the type is not detected, choose **Dashboard**.
+4. Open **Storage Monitor Card** in the list and select **Install**.
+5. Reload your browser to load the dashboard resource.
+
+The Marketplace installs the card into `www/community/storage-monitor-card/` and adds the dashboard resource automatically. If you manage resources in YAML, add the resource shown in the install dialog — see [Dashboard resources](#dashboard-resources) below.
+
+### HACS (Home Assistant 2026.10 and older)
+
+1. Install [HACS](https://hacs.xyz/) if you have not already.
+2. Open **HACS → Dashboard**.
 3. Open the three-dot menu in the top right corner and choose **Custom repositories**.
 4. Add `https://github.com/fissssssh/storage-monitor-card` with category **Dashboard**.
 5. Search for **Storage Monitor Card**, open it and click **Download**.
 6. Reload Home Assistant when prompted.
 
-HACS installs the card into `www/community/storage-monitor-card/` and registers the dashboard resource automatically. If the card does not show up in the card picker, add the resource manually under **Settings → Dashboards → Resources**:
+### Dashboard resources
 
-| URL | Resource type |
-|---|---|
-| `/hacsfiles/storage-monitor-card/storage-monitor-card.js` | JavaScript module |
+Marketplace and HACS register the dashboard resource automatically. If you manage dashboard resources in YAML, or the card does not show up in the card picker, add it under **Settings → Dashboards → Resources**:
+
+| Home Assistant | URL | Resource type |
+|---|---|---|
+| 2026.11+ (Marketplace) | `/local/community/storage-monitor-card/storage-monitor-card.js` | JavaScript module |
+| 2026.10 and older (HACS) | `/hacsfiles/storage-monitor-card/storage-monitor-card.js` | JavaScript module |
 
 ### Manual
 
