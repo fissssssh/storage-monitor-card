@@ -15,3 +15,4 @@
 - Add the `language` option (`auto`, `en`, `zh-Hans`) to both the card and the visual editor, plus a language selector in the editor.
 - Format numbers, capacities and power-on hours with the locale of the active language.
 - Remove the hard-coded Chinese default title so a card without `title` follows the configured language.
+- Add HACS packaging, README previews and installation instructions.
